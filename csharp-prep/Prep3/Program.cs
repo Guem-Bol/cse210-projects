@@ -1,9 +1,32 @@
 using System;
+using System.Globalization;
 
-class Program
+
+
+Random randomGenerator = new Random();
+int number = randomGenerator.Next(1, 11);
+
+int guess = 0;
+
+while (guess != number)
 {
-    static void Main(string[] args)
+    Console.WriteLine("What is your Guess? ");
+    guess = int.Parse(Console.ReadLine());
+
+    if (number > guess)
     {
-        Console.WriteLine("Hello Prep3 World!");
+        Console.WriteLine("Higher");
     }
+    else if (number < guess)
+    {
+        Console.WriteLine("Lower");
+    }
+    else
+    {
+        Console.WriteLine("You guessed it!");
+
+    }
+
+
+
 }
